@@ -11,7 +11,7 @@ Static website for the Pine Valley Homeowners Association, a residential neighbo
 ## Architecture
 
 - **Generator:** Hugo with the Ananke theme (git submodule at `themes/ananke/`)
-- **Hosting:** Cloudflare Pages — auto-builds on every push to `main`
+- **Hosting:** Cloudflare Pages — auto-builds on every push to `main`. Preview hosting at https://pinevalleyroswell-fyi.pages.dev.
 - **Repo:** https://github.com/economycomfort/pinevalleyroswell.fyi
 - **Build command:** `hugo --minify` (defined in `wrangler.toml`)
 
@@ -43,6 +43,4 @@ static/
 
 ## Backlog
 
-- **Payment link** — `href="#"` in `content/_index.md`; swap when URL is known
-- **TikTok** — social link ready to add once account URL is confirmed
-- **Events upgrade** — consider Google Calendar embed + Luma for signups when event volume grows
+See [`docs/backlog.md`](./docs/backlog.md).
