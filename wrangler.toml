@@ -1,0 +1,6 @@
+name = "pinevalley-hoa"
+compatibility_date = "2024-01-01"
+
+[build]
+command = "hugo --minify"
+publish_directory = "public"

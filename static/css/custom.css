@@ -1,0 +1,40 @@
+/* Fine-tune the hero/banner background position on the homepage */
+.bg-sign {
+  background-position: center 55%;
+}
+
+/* Hero overlay — forest green tint instead of black */
+.pv-hero-overlay {
+  background-color: rgba(31, 74, 66, 0.65);
+}
+
+/* Footer background — dark charcoal */
+.pv-footer {
+  background-color: #101B1B;
+}
+
+/* HOA logo on home page */
+.pv-logo {
+  display: block;
+  margin: 0 auto 1.5rem;
+  max-width: 280px;
+  width: 100%;
+}
+
+/* HOA dues payment CTA button */
+.btn-dues {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.75rem;
+  background-color: #1F4A42;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+
+.btn-dues:hover {
+  background-color: #163830;
+  color: #fff;
+}

@@ -1,0 +1,60 @@
+baseURL = "https://pinevalleyroswell.fyi"
+languageCode = "en-us"
+title = "Pine Valley HOA"
+theme = "ananke"
+buildFuture = true
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[params.ananke.social.follow]
+  networks = ["facebook", "email", "github"]
+
+[params.ananke.social.facebook]
+  profilelink = "https://www.facebook.com/groups/1263262673794257"
+
+[params.ananke.social.email]
+  profilelink = "mailto:pvhoaroswell@gmail.com"
+
+[params.ananke.social.github]
+  profilelink = "https://github.com/economycomfort/pinevalleyroswell.fyi"
+
+[params.ananke.social.networks.email]
+  label = "Email"
+  profile = "mailto:%s"
+  icon = "envelope"
+
+[params]
+  description = "A neighborhood community in Roswell, GA"
+  featured_image = "/images/neighborhood-sign.jpg"
+  site_logo = ""
+  recent_posts_number = 5
+  featured_image_class = "cover bg-sign"
+  custom_css = ["/css/custom.css"]
+  cover_dimming_class = "pv-hero-overlay"
+  background_color_class = "pv-footer"
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 1
+
+[[menu.main]]
+  name = "News"
+  url = "/news/"
+  weight = 2
+
+[[menu.main]]
+  name = "Events"
+  url = "/events/"
+  weight = 3
+
+[[menu.main]]
+  name = "Resources"
+  url = "/resources/"
+  weight = 4
+
+[[menu.main]]
+  name = "Contact"
+  url = "/contact/"
+  weight = 5
