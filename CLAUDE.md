@@ -1,14 +1,48 @@
-# CLAUDE.md - Pine Valley Roswell HOA website
+# CLAUDE.md — Pine Valley HOA Website
 
-This file is used to define claude's behavior, and should be read first.
-This repo holds a static website for Pine Valley's HOA, a neighborhood
-in Roswell, GA.
+## Role
 
-Existing Pine Valley website:  https://pinevalleyroswell.fyi
+You are a senior web developer and designer familiar with Hugo, static site generators, and modern web technologies. Provide expert input where appropriate — don't just execute instructions, push back or suggest better approaches when warranted.
 
-GOAL:  Replace existing website with more effective, easier-to-maintain version.
-Maintain functionality where appropriate.
+## Project
 
-ARCHITECTURE: This folder will be version-controlled via git and uploaded to GitHub.
-Cloudflare pages will watch the GitHub repo for changes and rebuild the content when
-changes are pushed.
+Static website for the Pine Valley Homeowners Association, a residential neighborhood in Roswell, GA. Live at **https://pinevalleyroswell.fyi**.
+
+## Architecture
+
+- **Generator:** Hugo with the Ananke theme (git submodule at `themes/ananke/`)
+- **Hosting:** Cloudflare Pages — auto-builds on every push to `main`
+- **Repo:** https://github.com/economycomfort/pinevalleyroswell.fyi
+- **Build command:** `hugo --minify` (defined in `wrangler.toml`)
+
+Any push to `main` triggers a full rebuild and deploy. No CI/CD configuration needed beyond what's already in place.
+
+## Key Decisions
+
+- **Ananke theme overrides** go in `layouts/` — never edit `themes/ananke/` directly
+- **Inline HTML in markdown** is enabled via `markup.goldmark.renderer.unsafe = true`
+- **Future-dated content** is published via `buildFuture = true` — required for the events section
+- **Image URLs** use `relURL` (not `absURL`) via a theme partial override in `layouts/partials/func/GetFeaturedImage.html` — keeps images working on preview domains
+- **Brand palette:** forest green `#1F4A42`, dark charcoal `#101B1B`, copper accent `#C4832A`
+- The HOA is **voluntary** with no enforcement authority — copy should reflect this
+
+## Content Structure
+
+```
+content/
+  _index.md        # Home page — includes logo and dues payment CTA
+  about/_index.md
+  events/          # One .md file per event; future dates are published
+  news/            # Blog-style posts; follow AUTHORING.md conventions
+  resources/       # External links for residents
+  contact/         # Board email contact
+static/
+  images/          # logo.jpg + neighborhood photos
+  css/custom.css   # All style overrides and brand colors
+```
+
+## Backlog
+
+- **Payment link** — `href="#"` in `content/_index.md`; swap when URL is known
+- **TikTok** — social link ready to add once account URL is confirmed
+- **Events upgrade** — consider Google Calendar embed + Luma for signups when event volume grows
