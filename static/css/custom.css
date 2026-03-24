@@ -3,14 +3,14 @@
   background-position: center 55%;
 }
 
-/* Hero overlay — forest green tint instead of black */
+/* Hero overlay — neutral dark, no color cast */
 .pv-hero-overlay {
-  background-color: rgba(31, 74, 66, 0.65);
+  background-color: rgba(16, 27, 27, 0.60);
 }
 
-/* Footer background — dark charcoal */
+/* Footer background — forest green */
 .pv-footer {
-  background-color: #101B1B;
+  background-color: #1F4A42;
 }
 
 /* HOA logo on home page */
